@@ -1,4 +1,5 @@
 import Link from "../Link/Link";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const NavBar = () => {
   const routes = [
@@ -11,12 +12,14 @@ const NavBar = () => {
 
   return (
     <nav>
+      <AiOutlineMenu></AiOutlineMenu>
       <ul className="md:flex">
         {
         routes.map((route) => <Link key={route.id} route={route}></Link>
           
         )}
       </ul>
+      
     </nav>
   );
 };
